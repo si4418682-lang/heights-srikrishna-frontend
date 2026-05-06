@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Sri Krishna Heights</title>
+
+  <!-- SEO -->
+  <meta name="description" content="About Sri Krishna Heights – thoughtfully built residential homes with quality construction, functional design, and long-term value.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+    }
+
+.navbar-glass {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+.mini-footer{
+  background:#0b0f14;
+  padding:18px 40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.mini-footer .left{
+  color:#fff;
+  font-weight:500;
+}
+
+.mini-footer .dot{
+  color:#f2b11f;
+  margin:0 6px;
+}
+
+.mini-footer .right{
+  color:#9aa3b2;
+  font-size:.9rem;
+}
+
+
+    /* HERO */
+    .hero {
+  height: 100vh;
+  background: url("crp.png") center center / cover no-repeat;
+  position: relative;
+}
+
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 20, 40, 0.55);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-label {
+      color: #f2b11f;
+      letter-spacing: 4px;
+     font-size: 2.85rem;
+    font-weight: 700;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-light {
+      background: #f6f7f9;
+    }
+
+    
+
+    /* WHO WE ARE */
+    .section-tag {
+      font-size: 0.8rem;
+      letter-spacing: 3px;
+      color: #c9a24d;
+      font-weight: 500;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 3px;
+      background: #c9a24d;
+      margin: 16px 0;
+    }
+
+    .who-text {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #444;
+    }
+
+    /* CIRCULAR VISUAL */
+    .circle-visual {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+      background: #fff;
+    }
+
+    .circle-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.9) contrast(1.05);
+      transition: transform 0.6s ease;
+    }
+
+    .circle-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at top left,
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.05)
+      );
+    }
+
+    .circle-visual:hover img {
+      transform: scale(1.06);
+    }
+
+    /* INFO CARDS */
+    .info-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      height: 100%;
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+
+      .circle-visual {
+        width: 240px;
+        height: 240px;
+        margin-bottom: 30px;
+      }
+
+      .who-text,
+      .section-tag,
+      h2 {
+        text-align: center;
+      }
+
+      .gold-line {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    /* ICON CIRCLE */
+.icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* VISION */
+.vision-card {
+  border-left: 4px solid #c9a24d;
+}
+
+.vision-icon {
+  background: rgba(201, 162, 77, 0.15);
+  color: #c9a24d;
+}
+
+/* MISSION */
+.mission-card {
+  border-left: 4px solid #1f3c68;
+}
+
+.mission-icon {
+  background: rgba(31, 60, 104, 0.15);
+  color: #1f3c68;
+}
+
+/* CARD REFINEMENT */
+.info-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+}
+
+.design-philosophy.with-bg {
+  position: relative;
+  padding: 110px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Background plan */
+.design-philosophy.with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("F1.jpeg");
+  background-size: cover;
+  background-position: center;
+opacity: 2;
+  transform: scale(1.05);
+  z-index: 0;
+}
+
+.design-philosophy.with-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
+
+.design-philosophy.with-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Bring content above background */
+.design-philosophy.with-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.why-choose-us.mature {
+  padding: 110px 0;
+  background: #ffffff;
+}
+
+.section-tag {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: #c9a24d; /* gold */
+  font-weight: 500;
+}
+
+.section-sub {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* CARD */
+.choose-card-mature {
+  padding: 40px 30px;
+  border-left: 3px solid #c9a24d;
+  background: #fafafa;
+  height: 100%;
+  transition: background 0.3s ease;
+}
+
+.choose-card-mature h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2933;
+}
+
+.choose-card-mature p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Subtle interaction */
+.choose-card-mature:hover {
+  background: #f4f4f4;
+}
+
+.specifications {
+  padding: 110px 0;
+  background: #f6f7f9;
+}
+
+.spec-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.spec-list li {
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.spec-list li:last-child {
+  border-bottom: none;
+}
+
+.spec-list strong {
+  display: inline-block;
+  min-width: 120px;
+  color: #1f2933;
+  font-weight: 600;
+}
+
+.facilities {
+  padding: 110px 0;
+  background: #f6f7f9;
+}
+
+.facility-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid #e5e5e5;
+}
+
+.facility-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin: 0 auto 14px;
+}
+
+/* COLOR CODING (SUBTLE) */
+.facility-icon.blue {
+  background: rgba(31, 60, 104, 0.12);
+  color: #1f3c68;
+}
+
+.facility-icon.gold {
+  background: rgba(201, 162, 77, 0.15);
+  color: #c9a24d;
+}
+
+.facility-icon.green {
+  background: rgba(60, 141, 111, 0.15);
+  color: #3c8d6f;
+}
+
+.facility-icon.purple {
+  background: rgba(90, 85, 155, 0.15);
+  color: #5a559b;
+}
+
+.facility-card h6 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+  color: #1f2933;
+}
+
+.facility-icon i {
+  font-size: 1.35rem;
+}
+
+
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.whatsapp-float i {
+  line-height: 1;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" href="index.html">श्री Krishna Heights</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-lg-4">
+        <li class="nav-item">
+          <a class="nav-link" href="index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="project.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="booking.php">Booking</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inquiry.php">Inquiry</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+
+<!-- HERO -->
+<header class="hero d-flex align-items-center text-center text-white">
+  <div class="container hero-content">
+    <span class="about-label">ABOUT</span>
+    <h1 class="display-5 fw-semibold mt-2">Sri Krishna Heights</h1>
+    <p class="mt-3 fs-5">Thoughtfully built homes with lasting value</p>
+  </div>
+</header>
+
+<main>
+
+<!-- WHO WE ARE -->
+<section>
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <div class="col-md-6">
+        <span class="section-tag">WHO WE ARE</span>
+        <h2 class="fw-semibold mt-2">Building Homes with Purpose</h2>
+        <div class="gold-line"></div>
+        <p class="who-text">
+          Sri Krishna Heights is a residential development focused on creating
+          practical and well-planned living spaces. The project emphasizes
+          quality construction, functional layouts, and long-term usability,
+          ensuring a comfortable lifestyle for everyday living.
+        </p>
+      </div>
+
+      <div class="col-md-6 d-flex justify-content-center">
+        <div class="circle-visual">
+          <img src="aboutvsual.png" alt="Sri Krishna Heights Visual">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VISION & MISSION -->
+<section class="section-light">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- VISION -->
+      <div class="col-md-6">
+        <div class="info-card vision-card">
+          <div class="icon-circle vision-icon">
+            👁️
+          </div>
+          <h3 class="fw-semibold mt-3">Our Vision</h3>
+          <p>
+            To create reliable and thoughtfully designed homes that provide
+            comfort, value, and long-term trust.
+          </p>
+        </div>
+      </div>
+
+      <!-- MISSION -->
+      <div class="col-md-6">
+        <div class="info-card mission-card">
+          <div class="icon-circle mission-icon">
+            🎯
+          </div>
+          <h3 class="fw-semibold mt-3">Our Mission</h3>
+          <p>
+            To deliver quality residential spaces through responsible
+            construction, careful planning, and transparency.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- DESIGN VISUALS -->
+<section class="design-philosophy with-bg">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-tag">DESIGN PHILOSOPHY</span>
+      <h2 class="fw-semibold mt-2">Designed for Everyday Living</h2>
+      <p class="philosophy-intro">
+        Our approach focuses on planning spaces that feel comfortable, functional,
+        and intuitive—supporting modern living without unnecessary complexity.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- philosophy cards stay unchanged -->
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHY CHOOSE US -->
+<section class="why-choose-us mature">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-tag">WHY CHOOSE US</span>
+      <h2 class="fw-semibold mt-2">Built on Trust and Quality</h2>
+      <p class="section-sub">
+        Our approach focuses on reliability, transparency, and thoughtful execution
+        at every stage of development.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-3">
+        <div class="choose-card-mature">
+          <h5>Quality Construction</h5>
+          <p>Use of durable materials and proven engineering practices.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="choose-card-mature">
+          <h5>Transparent Process</h5>
+          <p>Clear documentation and honest communication throughout.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="choose-card-mature">
+          <h5>Thoughtful Planning</h5>
+          <p>Layouts designed for comfort, efficiency, and everyday usability.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="choose-card-mature">
+          <h5>Customer-Centric Approach</h5>
+          <p>Homes planned with real lifestyle needs in mind.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SPECIFICATIONS -->
+<section class="specifications">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-tag">SPECIFICATIONS</span>
+      <h2 class="fw-semibold mt-2">Construction & Material Details</h2>
+      <p class="section-sub">
+        Built with quality materials and standard construction practices
+        to ensure durability, safety, and long-term value.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <ul class="spec-list">
+          <li>
+            <strong>Structure:</strong>
+            RCC framed structure designed as per standard engineering norms.
+          </li>
+          <li>
+            <strong>Walls:</strong>
+            External walls with weather-resistant finish; internal walls with smooth plaster.
+          </li>
+          <li>
+            <strong>Flooring:</strong>
+            Vitrified tile flooring in living, dining, and bedrooms.
+          </li>
+          <li>
+            <strong>Kitchen:</strong>
+            Provision for modular kitchen with granite platform and stainless-steel sink.
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <ul class="spec-list">
+          <li>
+            <strong>Doors & Windows:</strong>
+            Quality wooden doors with aluminum / UPVC windows and clear glass.
+          </li>
+          <li>
+            <strong>Electrical:</strong>
+            Concealed copper wiring with adequate power points and branded switches.
+          </li>
+          <li>
+            <strong>Plumbing:</strong>
+            Concealed plumbing with standard quality fittings.
+          </li>
+          <li>
+            <strong>Painting:</strong>
+            Interior walls with premium emulsion paint; exterior with weatherproof paint.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FACILITIES -->
+<section class="facilities">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-tag">FACILITIES</span>
+      <h2 class="fw-semibold mt-2">Essential Amenities for Comfortable Living</h2>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon blue">
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+          <h6>Power Backup</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon gold">
+            <i class="bi bi-car-front"></i>
+          </div>
+          <h6>Car Parking</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon green">
+            <i class="bi bi-bicycle"></i>
+          </div>
+          <h6>Two-Wheeler Parking</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon purple">
+            <i class="bi bi-camera-video"></i>
+          </div>
+          <h6>CCTV Surveillance</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon blue">
+           <i class="fa-solid fa-elevator"></i>
+          </div>
+          <h6>Lift Facility</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon gold">
+            <i class="bi bi-droplet"></i>
+          </div>
+          <h6>24×7 Water Supply</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon green">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h6>Secure Entry</h6>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6">
+        <div class="facility-card">
+          <div class="facility-icon purple">
+            <i class="bi bi-plug"></i>
+          </div>
+          <h6>Energy-Efficient Systems</h6>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SMALL FOOTER -->
+<footer class="mini-footer d-flex justify-content-between align-items-center">
+  <div class="left">
+    Shri Krishna Heights <span class="dot">•</span> Premium Living
+  </div>
+  <div class="right">
+    © 2026 Shri Krishna Heights. All rights reserved.
+  </div>
+</footer>
+
+
+</main>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/919903919047?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Sri%20Krishna%20Heights.%20Please%20share%20details."
+   class="whatsapp-float"
+   target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+</body>
+</html>

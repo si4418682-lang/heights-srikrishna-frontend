@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Shri Krishna Heights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <style>
+    /* 🔒 GLOBAL RESET (SAFE) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      background: #ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+/* NAVBAR */
+.navbar-glass {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+}
+.nav-link:hover {
+  color: #fff !important;
+}
+
+
+    /* HERO */
+    .project-hero {
+      position: relative;
+      height: 70vh;
+      background: url("BLD1.png")
+                  center / cover no-repeat;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 4vw, 3.6rem);
+      font-weight: 700;
+    }
+
+    .accent-text {
+      color: #f4c430;
+    }
+
+    .hero-divider {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, transparent, #f4c430, transparent);
+      margin: 18px auto;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    .accent-soft {
+      color: #e9d28a;
+      font-weight: 500;
+    }
+
+    /* PROJECT SECTION */
+    .project-section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 60px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.08);
+    }
+
+    .project-section img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 14px;
+    }
+
+    .btn-details {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-details:hover {
+      background: #f4c430;
+      color: #000;
+    }
+
+    /* ✅ FINAL FOOTER (NO GAP, NO GLITCH) */
+    .simple-footer {
+      width: 100%;
+      background: linear-gradient(90deg, #0b1d33, #0d1b2a);
+      padding: 22px 0;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .simple-footer p {
+      margin: 0;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      opacity: 0.95;
+    }
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.whatsapp-float i {
+  line-height: 1;
+}
+
+.whatsapp-float {
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+}
+
+.whatsapp-float i {
+  color: #ffffff !important;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" href="#">श्री Krishna Heights</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-lg-4">
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.php">Booking</a></li>
+        <li class="nav-item"><a class="nav-link active" href="inquiry.php">Inquiry</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="project-hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1 class="hero-title">Our <span class="accent-text">Projects</span></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">
+      Premium developments with
+      <span class="accent-soft">real locations</span>
+      and complete
+      <span class="accent-soft">transparency</span>
+    </p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="py-5">
+  <div class="container">
+
+    <div class="project-section">
+      <img src="crp.png">
+      <h3 class="fw-bold">Shri Krishna Heights</h3>
+      <p class="text-muted">📍 New Barrackpore, Kolkata</p>
+<iframe src="https://www.google.com/maps?q=22.689535093127322,88.44530937476313&output=embed"></iframe>
+
+      <div class="text-center mt-4">
+        <a href="project1.html" class="btn-details">View Details</a>
+      </div>
+    </div>
+</section>
+
+<!-- ✅ FOOTER (ABSOLUTE END) -->
+<footer class="simple-footer">
+  <p>© 2026 Shri Krishna Heights. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/919903919047?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Sri%20Krishna%20Heights.%20Please%20share%20details."
+   class="whatsapp-float"
+   target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+</body>
+</html>
