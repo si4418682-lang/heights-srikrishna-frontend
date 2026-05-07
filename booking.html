@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Book Flat or Site Visit | Shri Krishna Heights</title>
+<meta name="description" content="Book your flat or schedule a site visit at Shri Krishna Heights. RERA approved luxury flats with transparent pricing and premium amenities.">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0f1b33;
+  --gold:#d8a71f;
+  --cream:#fdfbf7;
+}
+
+/* BASE */
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--cream);
+  color:#111;
+}
+
+/* NAVBAR */
+.navbar-glass{
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.15);
+}
+.navbar-brand{font-weight:600}
+.nav-link{color:rgba(255,255,255,.85)!important}
+.nav-link:hover{color:#fff!important}
+
+/* HERO */
+.booking-hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(15,27,51,.75),rgba(15,27,51,.75)),
+    url("crp.png") center/cover no-repeat;
+}
+.booking-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.6rem;
+  font-weight:700;
+}
+.booking-hero h1 span{color:var(--gold)}
+.booking-hero p{
+  max-width:720px;
+  margin:20px auto 0;
+  font-size:1.1rem;
+  color:#e5e7eb;
+}
+
+/* HERO SEPARATOR */
+.hero-separator{
+  height:110px;
+  background:linear-gradient(to bottom,rgba(15,27,51,.35),#fdfbf7);
+}
+
+/* CHOICE BUTTONS */
+.choice-btn{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:32px 36px;
+  border-radius:28px;
+  background:#fff;
+  border:2px solid #e7e5e4;
+  cursor:pointer;
+  text-align:left;
+  transition:.4s;
+}
+.choice-btn.primary{
+  background:linear-gradient(135deg,var(--navy),#0b162c);
+  color:#fff;
+  border:none;
+}
+.choice-btn:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 55px rgba(0,0,0,.18);
+}
+.choice-icon{
+  min-width:60px;
+  height:60px;
+  border-radius:18px;
+  background:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#000;
+}
+
+/* FORM */
+.form-wrapper{
+  background:#fff;
+  border-radius:24px;
+  padding:42px;
+  box-shadow:0 30px 70px rgba(0,0,0,.08);
+}
+.form-label{font-weight:600}
+.form-control,.form-select{
+  border-radius:14px;
+  padding:14px;
+}
+
+/* BUTTON */
+.btn-gold{
+  background:var(--gold);
+  border:none;
+  padding:16px;
+  font-weight:600;
+  border-radius:14px;
+}
+.btn-gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 45px rgba(216,167,31,.45);
+}
+
+/* TRUST */
+.trust-card{
+  background:#faf9f7;
+  border-radius:18px;
+  padding:30px;
+  text-align:center;
+  transition:.4s;
+}
+.trust-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 45px rgba(0,0,0,.12);
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:.9s;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+.new-footer{
+  width:100%;
+  background:var(--navy);
+  color:#fff;
+  text-align:center;
+  padding:24px 12px;
+  font-size:15px;
+}
+
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.whatsapp-float i {
+  line-height: 1;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" href="#">श्री Krishna Heights</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-lg-4">
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link active" href="booking.php">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.php">Inquiry</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="booking-hero">
+  <div class="container">
+    <span class="badge rounded-pill mb-4" style="background:rgba(216,167,31,.2);color:var(--gold)">
+      <i class="bi bi-patch-check"></i> RERA Approved Project
+    </span>
+    <h1>
+      Book Your Flat or<br>
+      Schedule a <span>Site Visit</span> at<br>
+      Shri Krishna Heights
+    </h1>
+    <p>Experience premium living with transparent pricing, prime location, and world-class amenities.</p>
+  </div>
+</section>
+
+<div class="hero-separator"></div>
+
+<!-- BUTTONS -->
+<div class="container mb-5">
+  <div class="row g-4 justify-content-center mt-5">
+    <div class="col-md-6 col-lg-5">
+      <button class="choice-btn primary" onclick="scrollToSection('flat-booking-section')">
+        <div class="choice-icon"><i class="bi bi-building fs-3"></i></div>
+        <div>
+          <h5>Flat Booking</h5>
+          <small>Check availability & reserve your flat</small>
+        </div>
+      </button>
+    </div>
+    <div class="col-md-6 col-lg-5">
+      <button class="choice-btn" onclick="scrollToSection('site-visit-section')">
+        <div class="choice-icon"><i class="bi bi-calendar-check fs-3"></i></div>
+        <div>
+          <h5>Site Visit</h5>
+          <small>Schedule a guided tour</small>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- FLAT BOOKING FORM -->
+<section id="flat-booking-section" class="pt-5 pb-5 reveal">
+  <div class="container">
+    <div class="form-wrapper">
+    <div class="form-success d-none text-center">
+  <h5 class="mb-2 text-success">
+    ✅ Thank you for your interest in Shri Krishna Heights.
+  </h5>
+  <p class="mb-0">
+    Our representatives will reach out to you shortly on the provided contact details.
+  </p>
+</div>
+
+
+    <form class="row g-4 booking-form" method="POST" action="submit-form.php">
+
+        <div class="col-md-6">
+          <label class="form-label">Full Name *</label>
+         <input class="form-control" name="name" required>
+
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone *</label>
+       <input class="form-control" name="phone" required>
+
+        </div>
+        <div class="col-12">
+          <label class="form-label">Email *</label>
+         <input class="form-control" name="email">
+
+        </div>
+       <div class="col-md-6">
+  <label class="form-label">Flat Type *</label>
+  <select class="form-select" id="flatType" name="flat_type" onchange="toggleCustomFlat()">
+
+    <option selected disabled>Select flat type</option>
+    <option>1 BHK</option>
+    <option>2 BHK</option>
+    <option>3 BHK</option>
+    <option value="custom">Write your own</option>
+  </select>
+</div>
+
+<!-- CUSTOM FLAT INPUT (HIDDEN BY DEFAULT) -->
+<div class="col-md-6 d-none" id="customFlatBox">
+  <label class="form-label">Your Flat Requirement *</label>
+ <input type="text" class="form-control" name="custom_flat" placeholder="Write your flat type">
+
+</div>
+
+       
+        <div class="col-12">
+         <button type="submit" class="btn btn-gold w-100">Check Availability</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SITE VISIT -->
+<section id="site-visit-section" class="py-5 reveal">
+  <div class="container">
+    <h2 class="text-center mb-4" style="font-family:'Playfair Display'">Schedule a Site Visit</h2>
+    <div class="form-wrapper mx-auto" style="max-width:900px">
+     <div class="form-success d-none text-center">
+  <h5 class="mb-2 text-success">
+    ✅ Thank you for your interest in Shri Krishna Heights.
+  </h5>
+  <p class="mb-0">
+    Our representatives will reach out to you shortly on the provided contact details.
+  </p>
+</div>
+
+
+  <form class="row g-4 booking-form" method="POST" action="submit-form.php">
+
+  <input type="hidden" name="form_type" value="Site Visit">
+
+  <div class="col-md-6">
+    <label class="form-label">Full Name *</label>
+    <input class="form-control" name="name" required>
+  </div>
+
+  <div class="col-md-6">
+    <label class="form-label">Phone *</label>
+    <input class="form-control" name="phone" required>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-gold w-100">
+      Schedule Visit
+    </button>
+  </div>
+
+</form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="new-footer">
+  © 2026 Shri Krishna Heights. All Rights Reserved.
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function scrollToSection(id){
+  const el=document.getElementById(id);
+  const y=el.getBoundingClientRect().top+window.pageYOffset-100;
+  window.scrollTo({top:y,behavior:'smooth'});
+}
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<window.innerHeight-100){
+      el.classList.add('active');
+    }
+  });
+});
+</script>
+
+<script>
+function toggleCustomFlat(){
+  const flatType = document.getElementById("flatType").value;
+  const box = document.getElementById("customFlatBox");
+
+  if(flatType === "custom"){
+    box.classList.remove("d-none");
+  } else {
+    box.classList.add("d-none");
+  }
+}
+</script>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/919903919047?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Sri%20Krishna%20Heights.%20Please%20share%20details."
+   class="whatsapp-float"
+   target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<?php if (isset($_GET['success'])): ?>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const successType = "<?php echo $_GET['success']; ?>";
+
+  if (successType === "flat") {
+      const flatWrapper = document.querySelector("#flat-booking-section .form-wrapper");
+      flatWrapper.querySelector(".booking-form").style.display = "none";
+      flatWrapper.querySelector(".form-success").classList.remove("d-none");
+  }
+
+  if (successType === "site") {
+      const siteWrapper = document.querySelector("#site-visit-section .form-wrapper");
+      siteWrapper.querySelector(".booking-form").style.display = "none";
+      siteWrapper.querySelector(".form-success").classList.remove("d-none");
+  }
+
+});
+</script>
+<?php endif; ?>
+
+
+</body>
+</html>

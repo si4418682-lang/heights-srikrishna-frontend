@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inquiry | Krishna Heights</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Inquire about premium apartments at Krishna Heights.">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Inter',sans-serif;
+  margin:0;
+  color:#111;
+}
+
+/* ================= NAVBAR (EXACT COPY) ================= */
+.navbar-glass {
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.nav-link {
+  color: rgba(255,255,255,0.85) !important;
+}
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* ================= HERO ================= */
+.inquiry-hero{
+  min-height:100vh;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.45)
+    ),
+    url("inq.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  padding-top:100px;
+}
+
+.hero-content{
+  max-width:900px;
+  margin:auto;
+  color:#fff;
+}
+.hero-badge{
+  display:inline-block;
+  padding:10px 26px;
+  border-radius:999px;
+  background:rgba(255,255,255,0.2);
+  font-size:.9rem;
+  letter-spacing:1px;
+  margin-bottom:30px;
+}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,5vw,3.8rem);
+  margin-bottom:15px;
+}
+.hero-title span{ color:#f2b11f; }
+.hero-text{
+  font-size:1.05rem;
+  opacity:.95;
+  margin-bottom:40px;
+}
+.hero-btn{
+  background:#f2b11f;
+  color:#000;
+  padding:14px 38px;
+  border-radius:50px;
+  font-weight:500;
+  text-decoration:none;
+  transition:.3s;
+}
+.hero-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(242,177,31,.45);
+}
+
+/* ================= FORM ================= */
+.form-section{
+  background:#0f1217;
+  padding:110px 0;
+}
+.form-card{
+  background:#151a21;
+  border-radius:22px;
+  padding:50px;
+  max-width:620px;
+  margin:auto;
+}
+.form-card h2{
+  font-family:'Playfair Display',serif;
+  color:#fff;
+  margin-bottom:30px;
+}
+.form-control,
+.form-select{
+  background:#1e2430;
+  border:none;
+  border-radius:14px;
+  padding:16px 18px;
+  color:#fff;
+}
+.form-control::placeholder{ color:#c0c4cc; }
+.form-control:focus,
+.form-select:focus{
+  outline:none;
+  box-shadow:0 0 0 2px rgba(242,177,31,.6);
+}
+.submit-btn{
+  background:#f2b11f;
+  border:none;
+  padding:16px;
+  border-radius:50px;
+  font-weight:500;
+  margin-top:10px;
+  transition:.3s;
+}
+.submit-btn:hover{
+  box-shadow:0 14px 32px rgba(242,177,31,.55);
+}
+.form-note{
+  font-size:.85rem;
+  color:#b9bdc7;
+  margin-top:12px;
+  text-align:center;
+}
+
+/* ================= WHY ================= */
+.why-section{
+  background:#0b0f14;
+  padding:100px 0;
+}
+.why-title{
+  font-family:'Playfair Display',serif;
+  color:#fff;
+  text-align:center;
+  margin-bottom:60px;
+}
+.why-title span{ color:#f2b11f; }
+.why-card{
+  background:#151a21;
+  border-radius:20px;
+  padding:40px;
+  height:100%;
+  transition:.3s;
+}
+.why-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 0 1px rgba(242,177,31,.6);
+}
+.why-icon{
+  width:54px;
+  height:54px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#f2b11f;
+  border:1px solid rgba(242,177,31,.6);
+  margin-bottom:18px;
+}
+
+/* ================= MAP ================= */
+.map-section{
+  background:#0b0f14;
+  padding:100px 0;
+}
+.map-title{
+  font-family:'Playfair Display',serif;
+  color:#fff;
+  text-align:center;
+}
+.map-title span{ color:#f2b11f; }
+.map-card{
+  margin-top:40px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.map-caption{
+  text-align:center;
+  margin-top:18px;
+  color:#bfc6d2;
+}
+.map-caption span{ color:#f2b11f; }
+
+/* ================= SMALL FOOTER ================= */
+.mini-footer{
+  background:#0b0f14;
+  padding:18px 40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+.mini-footer .left{
+  color:#fff;
+  font-weight:500;
+}
+.mini-footer .dot{
+  color:#f2b11f;
+  margin:0 6px;
+}
+.mini-footer .right{
+  color:#9aa3b2;
+  font-size:.9rem;
+}
+
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.whatsapp-float i {
+  line-height: 1;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-glass fixed-top">
+  <div class="container-fluid px-5">
+    <a class="navbar-brand" href="#">श्री Krishna Heights</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+      <ul class="navbar-nav gap-lg-4">
+        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.php">Booking</a></li>
+        <li class="nav-item"><a class="nav-link active" href="inquiry.php">Inquiry</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="inquiry-hero">
+  <div class="container hero-content">
+    <div class="hero-badge">NOW ACCEPTING INQUIRIES</div>
+    <h1 class="hero-title">Elevate Your <span>Lifestyle</span></h1>
+    <p class="hero-text">
+      Premium apartments crafted for modern living at Shri Krishna Heights.
+    </p>
+    <a href="#inquiry-form" class="hero-btn">Inquire Now</a>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="inquiry-form">
+  <div class="form-card">
+    <h2>Start Your Journey</h2>
+
+    <!-- IMPORTANT: PHP-ready form -->
+    <form action="send-inquiry.php" method="POST">
+
+      <input
+        type="text"
+        name="name"
+        class="form-control mb-3"
+        placeholder="Full Name"
+        required
+      >
+
+      <input
+        type="tel"
+        name="phone"
+        class="form-control mb-3"
+        placeholder="Phone Number"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        class="form-control mb-3"
+        placeholder="Email Address"
+      >
+
+      <select
+        name="unit_type"
+        class="form-select mb-3"
+        id="unitSelect"
+      >
+        <option value="">Select Unit Type</option>
+        <option value="1 BHK">1 BHK</option>
+        <option value="2 BHK">2 BHK</option>
+        <option value="3 BHK">3 BHK</option>
+        <option value="custom">Write Your Own</option>
+      </select>
+
+      <textarea
+        name="message"
+        class="form-control mb-3 d-none"
+        id="customMsg"
+        placeholder="Write your requirement here..."
+      ></textarea>
+
+      <button type="submit" class="submit-btn w-100">
+        Submit Inquiry
+      </button>
+
+      <p class="form-note">
+        Your information is secure and confidential.
+      </p>
+
+    </form>
+  </div>
+</section>
+
+
+<!-- WHY -->
+<section class="why-section">
+  <div class="container">
+    <h2 class="why-title">Why Choose <span>Shri Krishna Heights</span></h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-geo-alt"></i></div>
+          <h5 class="text-white">Prime Location</h5>
+          <p class="text-secondary">Strategic connectivity and surroundings.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-buildings"></i></div>
+          <h5 class="text-white">Premium Construction</h5>
+          <p class="text-secondary">High-quality materials and craftsmanship.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-stars"></i></div>
+          <h5 class="text-white">Modern Lifestyle</h5>
+          <p class="text-secondary">Amenities designed for comfort.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-section">
+  <div class="container">
+    <h2 class="map-title">Discover Our <span>Location</span></h2>
+    <div class="map-card">
+      <iframe src="https://www.google.com/maps?q=22.689535093127322,88.44530937476313&output=embed"
+        width="100%" height="420" style="border:0" loading="lazy"></iframe>
+    </div>
+    <p class="map-caption">
+      <span>Shri Krishna Heights</span> • Premium Apartments in Prime Location
+    </p>
+  </div>
+</section>
+
+<!-- SMALL FOOTER -->
+<footer class="mini-footer d-flex justify-content-between align-items-center">
+  <div class="left">
+    Shri Krishna Heights <span class="dot">•</span> Premium Living
+  </div>
+  <div class="right">
+    © 2026 Shri Krishna Heights. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const s=document.getElementById("unitSelect");
+const m=document.getElementById("customMsg");
+s.addEventListener("change",()=>m.classList.toggle("d-none",s.value!=="custom"));
+</script>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/919903919047?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Sri%20Krishna%20Heights.%20Please%20share%20details."
+   class="whatsapp-float"
+   target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+</body>
+</html>
