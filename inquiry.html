@@ -268,11 +268,11 @@ body{
 
     <div class="collapse navbar-collapse justify-content-end" id="mainNav">
       <ul class="navbar-nav gap-lg-4">
-        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="booking.php">Booking</a></li>
-        <li class="nav-item"><a class="nav-link active" href="inquiry.php">Inquiry</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link active" href="inquiry.html">Inquiry</a></li>
       </ul>
     </div>
   </div>
@@ -296,7 +296,7 @@ body{
     <h2>Start Your Journey</h2>
 
     <!-- IMPORTANT: PHP-ready form -->
-    <form action="send-inquiry.php" method="POST">
+    <form onsubmit="handleInquirySubmit(event)">
 
       <input
         type="text"
@@ -412,6 +412,21 @@ body{
 const s=document.getElementById("unitSelect");
 const m=document.getElementById("customMsg");
 s.addEventListener("change",()=>m.classList.toggle("d-none",s.value!=="custom"));
+
+// Handle inquiry form submission client-side (replaces PHP backend)
+function handleInquirySubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const card = form.closest('.form-card');
+  form.style.display = 'none';
+  const successDiv = document.createElement('div');
+  successDiv.className = 'text-center';
+  successDiv.innerHTML = `
+    <h3 style="color:#f2b11f;margin-bottom:15px;">✅ Thank You!</h3>
+    <p style="color:#cfd6e4;">Your inquiry has been submitted successfully.<br>Our team will contact you shortly.</p>
+  `;
+  card.appendChild(successDiv);
+}
 </script>
 
 <!-- WHATSAPP FLOAT BUTTON -->
