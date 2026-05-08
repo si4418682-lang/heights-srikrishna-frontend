@@ -211,11 +211,11 @@ body{
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="mainNav">
       <ul class="navbar-nav gap-lg-4">
-        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="project.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link active" href="booking.php">Booking</a></li>
-        <li class="nav-item"><a class="nav-link" href="inquiry.php">Inquiry</a></li>
+        <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.html">Inquiry</a></li>
       </ul>
     </div>
   </div>
@@ -276,7 +276,7 @@ body{
 </div>
 
 
-    <form class="row g-4 booking-form" method="POST" action="submit-form.php">
+    <form class="row g-4 booking-form" onsubmit="handleBookingSubmit(event, 'flat')">
 
         <div class="col-md-6">
           <label class="form-label">Full Name *</label>
@@ -336,7 +336,7 @@ body{
 </div>
 
 
-  <form class="row g-4 booking-form" method="POST" action="submit-form.php">
+  <form class="row g-4 booking-form" onsubmit="handleBookingSubmit(event, 'site')">
 
   <input type="hidden" name="form_type" value="Site Visit">
 
@@ -405,27 +405,16 @@ function toggleCustomFlat(){
   <i class="bi bi-whatsapp"></i>
 </a>
 
-<?php if (isset($_GET['success'])): ?>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  const successType = "<?php echo $_GET['success']; ?>";
-
-  if (successType === "flat") {
-      const flatWrapper = document.querySelector("#flat-booking-section .form-wrapper");
-      flatWrapper.querySelector(".booking-form").style.display = "none";
-      flatWrapper.querySelector(".form-success").classList.remove("d-none");
-  }
-
-  if (successType === "site") {
-      const siteWrapper = document.querySelector("#site-visit-section .form-wrapper");
-      siteWrapper.querySelector(".booking-form").style.display = "none";
-      siteWrapper.querySelector(".form-success").classList.remove("d-none");
-  }
-
-});
+// Handle form submission client-side (replaces PHP backend)
+function handleBookingSubmit(e, type) {
+  e.preventDefault();
+  const form = e.target;
+  const wrapper = form.closest('.form-wrapper');
+  form.style.display = 'none';
+  wrapper.querySelector('.form-success').classList.remove('d-none');
+}
 </script>
-<?php endif; ?>
 
 
 </body>
